@@ -42,7 +42,7 @@ README.md
 ## ▶️ Installation
 
 ```bash
-git clone https://github.com/mayankverma2090/YouTube-RAG-Chatbot.git
+git clone https://github.com/sachintiwari93/youtube_RAG_Chatbot
 cd YouTube-RAG-Chatbot
 pip install -r requirements.txt
 streamlit run streamlit_app.py
