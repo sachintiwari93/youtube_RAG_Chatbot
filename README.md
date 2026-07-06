@@ -6,7 +6,7 @@ https://tlyq3r9r23govz6ckxkaxv.streamlit.app/
 A Retrieval-Augmented Generation (RAG) chatbot built using LangChain, Hugging Face Embeddings, FAISS, Groq LLM, and Streamlit. This application allows users to ask questions about any YouTube video by simply providing the video URL.
 ## 📸 Project Screenshot
 
-![Project Screenshot]
+![Project Screenshot](Screenshot 2026-07-07 010141.png)
 
 ## 🚀 Features
 
