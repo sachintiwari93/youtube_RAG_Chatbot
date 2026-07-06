@@ -1,5 +1,6 @@
 import streamlit as st
 from dotenv import load_dotenv
+import os
 
 from youtube_transcript_api import YouTubeTranscriptApi
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -31,7 +32,20 @@ def create_chunks(full_text):
 
 # ------------------ LLM ------------------
 
+api_key = None
+
+if "GROQ_API_KEY" in st.secrets:
+    api_key = st.secrets["GROQ_API_KEY"]
+
+if not api_key:
+    api_key = os.getenv("GROQ_API_KEY")
+
+if not api_key:
+    st.error("GROQ_API_KEY not found")
+    st.stop()
+
 llm = ChatGroq(
+    groq_api_key=api_key,
     model="llama-3.3-70b-versatile"
 )
 
